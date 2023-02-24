@@ -57,7 +57,7 @@ body:
   validations:
     required: true
 - type: input
-  id: akun-pic
+  id: suratpermohonan-akun
   attributes:
     label: Surat Permohonan Akun Akun Tertanda Tangan Ketua Lembaga
     description: "Kirimkan pada tautan https://go.teknologipendidikan.or.id/suratmasuk-dptsi"
@@ -68,6 +68,7 @@ body:
   id: ToS
   attributes:
     label: Dengan ini saya bertanggung jawab dan tunduk atas regulasi yang berlaku terkait penggunaan akun EDTECH-ID
+    description: Centang dibawah untuk melanjutkan
     options:
       - label: Ya, saya sadar dan bertanggung jawab atas penglolaan akun EDTECH-ID yang telah saya ajukan.
         required: true
