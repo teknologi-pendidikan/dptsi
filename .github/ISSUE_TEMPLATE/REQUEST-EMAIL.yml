@@ -1,0 +1,42 @@
+name: "Permohonan Email EDTECH-ID"
+description: Lembar Permohonan Email EDTECH-ID.
+title: "[EMAIL REQ] - <nama pemohon>"
+labels: ["email", "request"]
+body:
+- type: input
+  id: nama-pemohon
+  attributes:
+    label: Nama Lembaga Pemohon
+    description: "Nama lembaga yang mengajukan permohonan"
+    placeholder: "contoh: IMATEPSI, EDTECH-ID UM, LTDID"
+  validations:
+    required: true
+- type: input
+  id: akun-pemohon
+  attributes:
+    label: Akun EDTECH-ID Pemohon
+    description: "Akun EDTECH-ID Pemohon"
+    placeholder: "contoh: rengganugroho@edtech.or.id"
+  validations:
+    required: true
+- type: textarea
+  id: repro
+  attributes:
+    label: keperluan-email
+    description: "Untuk keperluan apa saja yang akan digunakan melalui email ini?"
+    value: |
+      1.
+      2.
+      3.
+      ...
+    render: bash
+  validations:
+    required: true
+- type: input
+  id: nama-akun
+  attributes:
+    label: Nama Akun Baru
+    description: "Nama Akun Baru EDTECH-ID"
+    placeholder: "contoh: conference-CCT23@teknologipendidikan.or.id"
+  validations:
+    required: true
