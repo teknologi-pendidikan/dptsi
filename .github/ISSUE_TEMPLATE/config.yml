@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security & System Vulnerabilities
+    url: https://dptsi.edtech.or.id/
+    about: Please report security vulnerabilities here.
