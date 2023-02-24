@@ -1,28 +1,36 @@
-name: "Permohonan Email EDTECH-ID"
-description: Lembar Permohonan Email EDTECH-ID.
-title: "[EMAIL REQ] - <nama pemohon>"
+name: "Permohonan Email EDTECH-ID (Lembaga/Kegiatan)"
+description: Lembar Permohonan Email EDTECH-ID (Lembaga/Kegiatan).
+title: "[EMAIL REQ] - <nama lembaga/kegiatan>"
 labels: ["email", "request"]
 body:
 - type: input
-  id: nama-pemohon
+  id: nama-lembaga
   attributes:
-    label: Nama Lembaga Pemohon
+    label: Nama Lembaga
     description: "Nama lembaga yang mengajukan permohonan"
     placeholder: "contoh: IMATEPSI, EDTECH-ID UM, LTDID"
   validations:
     required: true
 - type: input
-  id: akun-pemohon
+  id: nama-kegiatan
   attributes:
-    label: Akun EDTECH-ID Pemohon
-    description: "Akun EDTECH-ID Pemohon"
-    placeholder: "contoh: rengganugroho@edtech.or.id"
+    label: Nama Kegiatan
+    description: "Nama kegiatan yang akan dilaksanakan"
+    placeholder: "contoh: Lomba Pengembangan Teknologi Digital 2023"
+  validations:
+    required: false
+- type: input
+  id: nama-akun
+  attributes:
+    label: Nama Akun EDTECH-ID
+    description: "Akun EDTECH-ID yang dimohon"
+    placeholder: "contoh: inovdigfest@teknologipendidikan.or.id"
   validations:
     required: true
 - type: textarea
   id: repro
   attributes:
-    label: keperluan-email
+    label: Untuk keperluan apa akun ini akan digunakan?
     description: "Untuk keperluan apa saja yang akan digunakan melalui email ini?"
     value: |
       1.
@@ -33,10 +41,33 @@ body:
   validations:
     required: true
 - type: input
-  id: nama-akun
+  id: nama-pic
   attributes:
-    label: Nama Akun Baru
-    description: "Nama Akun Baru EDTECH-ID"
-    placeholder: "contoh: conference-CCT23@teknologipendidikan.or.id"
+    label: Nama Lengkap PIC Akun
+    description: "Nama Lengkap PIC Akun EDTECH-ID"
+    placeholder: "contoh: Arbianto Sudraga Wijayanto"
   validations:
     required: true
+- type: input
+  id: akun-pic
+  attributes:
+    label: Akun EDTECH-ID PIC
+    description: "Akun EDTECH-ID PIC"
+    placeholder: "contoh: arbianto.sudraga@teknologipendidikan.or.id"
+  validations:
+    required: true
+- type: input
+  id: akun-pic
+  attributes:
+    label: Surat Permohonan Akun Akun Tertanda Tangan Ketua Lembaga
+    description: "Kirimkan pada tautan https://go.teknologipendidikan.or.id/suratmasuk-dptsi"
+    placeholder: "kirimkan dalam bentuk berkas PDF dalam folder Onedrive EDTECH-ID"
+  validations:
+    required: true
+- type: checkboxes
+  id: ToS
+  attributes:
+    label: Dengan ini saya bertanggung jawab dan tunduk atas regulasi yang berlaku terkait penggunaan akun EDTECH-ID
+    options:
+      - label: Ya, saya sadar dan bertanggung jawab atas penglolaan akun EDTECH-ID yang telah saya ajukan.
+        required: true
