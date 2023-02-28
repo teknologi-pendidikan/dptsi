@@ -1,92 +1,36 @@
 /* Set min-height to avoid page reflow while session loading */
 .signedInStatus {
-  display: block;
-  min-height: 4rem;
-  width: 100%;
+  @apply block min-h-[4rem] w-full;
 }
-
 .loading,
 .loaded {
-  position: relative;
-  top: 0;
-  opacity: 1;
-  overflow: hidden;
-  border-radius: 0 0 0.6rem 0.6rem;
-  padding: 0.6rem 1rem;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease-in;
+  @apply bg-neutral-200 m-0 px-4 py-2 top-0;
 }
-
 .loading {
-  top: -2rem;
-  opacity: 0;
+  @apply top-[-2rem] opacity-0;
 }
-
 .signedInText,
 .notSignedInText {
-  position: absolute;
-  padding-top: 0.8rem;
-  left: 1rem;
-  right: 6.5rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  @apply absolute whitespace-nowrap text-ellipsis overflow-hidden z-[1] leading-[1.3rem] pt-[0.8rem] left-4 right-[6.5rem];
   display: inherit;
-  z-index: 1;
-  line-height: 1.3rem;
 }
-
 .signedInText {
-  padding-top: 0rem;
-  left: 4.6rem;
+  @apply pt-0 left-[4.6rem];
 }
-
 .avatar {
-  border-radius: 2rem;
-  float: left;
-  height: 2.8rem;
-  width: 2.8rem;
-  background-color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @apply float-left h-[2.8rem] w-[2.8rem] bg-[white] bg-cover bg-no-repeat rounded-[2rem];
 }
-
 .button,
 .buttonPrimary {
-  float: right;
-  margin-right: -0.4rem;
-  font-weight: 500;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1.4rem;
-  padding: 0.7rem 0.8rem;
-  position: relative;
-  z-index: 10;
-  background-color: transparent;
-  color: #555;
+  @apply float-right mr-[-0.4rem] font-medium cursor-pointer text-base leading-[1.4rem] relative z-10 bg-transparent text-[#555] px-[0.8rem] py-[0.7rem] rounded-[0.3rem];
 }
-
 .buttonPrimary {
-  background-color: #346df1;
-  border-color: #346df1;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.7rem 1.4rem;
+  @apply bg-[#346df1] text-white no-underline px-[1.4rem] py-[0.7rem] border-[#346df1] hover:shadow-[inset_0_0_5rem_rgba(0,0,0,0.2)];
 }
-
-.buttonPrimary:hover {
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.2);
-}
-
 .navItems {
-  margin-bottom: 2rem;
-  padding: 0;
+  @apply mb-8 p-0;
   list-style: none;
 }
-
 .navItem {
-  display: inline-block;
-  margin-right: 1rem;
+  @apply inline-block mr-4;
 }
