@@ -1,0 +1,74 @@
+name: "Permohonan Email EDTECH-ID (Lembaga/Kegiatan)"
+description: Lembar Permohonan Email EDTECH-ID (Lembaga/Kegiatan).
+title: "[EMAIL REQ] - <nama lembaga/kegiatan>"
+labels: ["email", "request"]
+body:
+- type: input
+  id: nama-lembaga
+  attributes:
+    label: Nama Lembaga
+    description: "Nama lembaga yang mengajukan permohonan"
+    placeholder: "contoh: IMATEPSI, EDTECH-ID UM, LTDID"
+  validations:
+    required: true
+- type: input
+  id: nama-kegiatan
+  attributes:
+    label: Nama Kegiatan
+    description: "Nama kegiatan yang akan dilaksanakan"
+    placeholder: "contoh: Lomba Pengembangan Teknologi Digital 2023"
+  validations:
+    required: false
+- type: input
+  id: nama-akun
+  attributes:
+    label: Nama Akun EDTECH-ID
+    description: "Akun EDTECH-ID yang dimohon"
+    placeholder: "contoh: inovdigfest@teknologipendidikan.or.id"
+  validations:
+    required: true
+- type: textarea
+  id: repro
+  attributes:
+    label: Untuk keperluan apa akun ini akan digunakan?
+    description: "Untuk keperluan apa saja yang akan digunakan melalui email ini?"
+    value: |
+      1.
+      2.
+      3.
+      ...
+    render: bash
+  validations:
+    required: true
+- type: input
+  id: nama-pic
+  attributes:
+    label: Nama Lengkap PIC Akun
+    description: "Nama Lengkap PIC Akun EDTECH-ID"
+    placeholder: "contoh: Arbianto Sudraga Wijayanto"
+  validations:
+    required: true
+- type: input
+  id: akun-pic
+  attributes:
+    label: Akun EDTECH-ID PIC
+    description: "Akun EDTECH-ID PIC"
+    placeholder: "contoh: arbianto.sudraga@teknologipendidikan.or.id"
+  validations:
+    required: true
+- type: input
+  id: suratpermohonan-akun
+  attributes:
+    label: Surat Permohonan Akun Akun Tertanda Tangan Ketua Lembaga
+    description: "Kirimkan pada tautan https://go.teknologipendidikan.or.id/suratmasuk-dptsi"
+    placeholder: "kirimkan dalam bentuk berkas PDF dalam folder Onedrive EDTECH-ID"
+  validations:
+    required: true
+- type: checkboxes
+  id: ToS
+  attributes:
+    label: Dengan ini saya bertanggung jawab dan tunduk atas regulasi yang berlaku terkait penggunaan akun EDTECH-ID
+    description: Centang dibawah untuk melanjutkan
+    options:
+      - label: Ya, saya sadar dan bertanggung jawab atas penglolaan akun EDTECH-ID yang telah saya ajukan.
+        required: true
